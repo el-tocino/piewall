@@ -22,14 +22,6 @@ The piwall configuration (see Dotpiwall file) contains the layout. Each screen i
  21 | 22 | 23 | 24 | 25 
  31 | 32 | 33 | 34 | 35 
 
-And let's say we want to only use certain displays:
-
-| - | - | - | - | - |
---- | --- | --- | --- | ---
-xx | xx | **13** | xx | xx
-xx | **22** | xx | **24** | xx
-**31** | xx | **33** | xx | **35**
-
 The PiWall software determines which tile it is from a separate configuration file called "/home/pi/.pitile", which should look like the following:
  
 > [tile]
