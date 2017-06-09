@@ -74,7 +74,7 @@ rebootpi() {
 }
 
 while [[ $# -gt 0 ]] ; do
-    if [[ "${1}" =~ ^(1|2|3|4|5|6)$ ]]; then
+    if [[ "${1}" =~  =~ ^-?[0-9]+$ ]] ; then
         PLYR="${1}"
         shift;
         case "${PACT}" in
@@ -87,7 +87,7 @@ while [[ $# -gt 0 ]] ; do
             *) echo "invalid argument ${PLYR}" ;;
         esac
     else
-        echo "${1} needs to be a number from 1-6!"
+        echo "${1} needs to be a number!"
         shift;
     fi
 done
