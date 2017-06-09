@@ -15,8 +15,8 @@ if [[ $# -lt 2 ]] ; then
 fi
 
 SSHCON='ssh -o ConnectTimeout=10 pi@192.168.16.10'
-STARTPLYR="screen -mdS cragwall /home/pi/startplayer.sh"
-STOPPLYR="screen -X -S cragwall quit"
+STARTPLYR="screen -mdS piwall /home/pi/startplayer.sh"
+STOPPLYR="screen -X -S piwall quit"
 IDPLYR="export DISPLAY=:0.0 ; leafpad /home/pi/playerid.txt"
 STOPID="sleep 60 && killall leafpad"
 RBC="sudo reboot"
