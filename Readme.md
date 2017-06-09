@@ -1,31 +1,28 @@
 # What
 
 PiWall is a tool that splits video from a single controller across any number of raspberry pi devices.
-We are using it to make the Crag Video Wall function.
 
 # How
 
-Use the Piwall instructions (below) to get piwall tools and libs installed on a master SD image for the pi's.  After master is created and tested, clone to other SD's and adjust networking as needed.
+Use the Piwall instructions (below) to get piwall tools and libs installed on a master image for the pi's.  After master is created and tested, clone to other microSD's and adjust networking as needed.
 
 # Configuration
 
 On initial SD installation, update and upgrade the apt packages.  
-Each pi is assigned a static address corresponding to its positions on the crag wall plus 100.  This number represents the last octet of the IP address.  The controller would be ip .100.  
 The pwlibs and pwomxplayer packages have to be installed.
 The openssh-server package has to be enabled (installed and disabled by default)
-The keyboard configuration has to be changed to EN_US ("Raspberry Pi Configuration")
-pwomxplayer must be able to play on the pi a video file (currently Inception_hallway_fight.mp4). 
+The keyboard configuration has to be changed to EN_US ("Raspberry Pi Configuration") if you're on a US keyboard.
+pwomxplayer must be able to play on the pi a video file. 
 
-The piwall configuration (see Dotpiwall file) contains the layout. Each screen is considered a "tile". In order to make this simpler, for (6th monitor) configuration purposes, assume we have a 5x3 layout. 
+The piwall configuration (see Dotpiwall file) contains the layout. Each screen is considered a "tile". Assume we have a 5x3 layout. 
 
-| - | - | - | - | - |
+| col1 | col2 | col3 | col4 | col5 |
 --- | --- | --- | --- | ---
  11 | 12 | 13 | 14 | 15 
  21 | 22 | 23 | 24 | 25 
  31 | 32 | 33 | 34 | 35 
 
-
-Our layout only uses the following (after we get sixth monitor):
+And let's say we want to only use certain displays:
 
 | - | - | - | - | - |
 --- | --- | --- | --- | ---
@@ -41,27 +38,19 @@ The PiWall software determines which tile it is from a separate configuration fi
  
 Where YY is the chosen tile name.
 
-For Dinoslam, we're going to have a 2x5 layout.  
-
 # Other info
 
-The following should be added to the hosts file:
-> 192.168.16.101 zero1
+The networking dependencies can make or break you.  The tile id's can also cause problems; be sure they're all unique. Pi zero w's over wifi can work, but will be very limited in the relative quality/resolution you can pass them.
 
-> 192.168.16.102 zero2
+# These tools
 
-> 192.168.16.103 zero3
+Most are quick and dirty for the event this was used at.  Any of these that connect to tiles, rely on ssh.  I used a private lan with passwordless ssh keys, your choices should be appropriate to venue and relative security.  
 
-> 192.168.16.104 zero4
-
-> 192.168.16.105 zero5
-
-> 192.168.16.106 zero6
-
-> 192.168.16.100 controller
-
-
-
+"tilecontrol.sh" is the most important, it can stop/start/restart/reboot/assign/id a tile, individually or en masse.
+"startall.sh" is self-explanatory.
+"stopallsh" is as well. 
+"playclip.sh" is used to play a clip one time.
+"loopclip.sh" is used to replay a clip for a length of time.
 
 # URLS
 
