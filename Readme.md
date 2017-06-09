@@ -1,10 +1,10 @@
 # What
 
-PiWall is a tool that splits video from a single controller across any number of raspberry pi devices.
+PiWall is a tool that splits video from a single controller across any number of raspberry pi devices. This repo is just support tools for an install of pi wall. See url's below for more.
 
 # How
 
-Use the Piwall instructions (below) to get piwall tools and libs installed on a master image for the pi's.  After master is created and tested, clone to other microSD's and adjust networking as needed.
+Use the Piwall instructions (linked below) to get piwall tools and libs installed on a master image for the pi's.  After master is created and tested, clone to other microSD's and adjust networking as needed. 
 
 # Configuration
 
