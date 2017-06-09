@@ -48,9 +48,7 @@ Most are quick and dirty for the event this was used at.  Any of these that conn
 
 "tilecontrol.sh" is the most important, it can stop/start/restart/reboot/assign/id a tile, individually or en masse.
 
-"startall.sh" is self-explanatory.
-
-"stopall.sh" is as well. 
+"startall.sh" and "stopall.sh" just bulk start/stop tiles (6 in my case).
 
 "playclip.sh" is used to play a clip one time.
 
