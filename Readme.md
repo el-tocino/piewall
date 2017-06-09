@@ -44,13 +44,16 @@ The networking dependencies can make or break you.  The tile id's can also cause
 
 # These tools
 
-Most are quick and dirty for the event this was used at.  Any of these that connect to tiles, rely on ssh.  I used a private lan with passwordless ssh keys, your choices should be appropriate to venue and relative security.  
+Most are quick and dirty for the event this was used at.  Any of these that connect to tiles, rely on ssh.  I used a private lan with passwordless ssh keys, your choices should be appropriate to venue and relative security.  Most are meant to be run on the controller only.
 
 "tilecontrol.sh" is the most important, it can stop/start/restart/reboot/assign/id a tile, individually or en masse.
 "startall.sh" is self-explanatory.
 "stopallsh" is as well. 
 "playclip.sh" is used to play a clip one time.
 "loopclip.sh" is used to replay a clip for a length of time.
+
+The one tile-based script:
+"startplayer.sh" is used on the tiles to initiate the player.
 
 # URLS
 
