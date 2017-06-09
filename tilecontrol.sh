@@ -14,7 +14,8 @@ if [[ $# -lt 2 ]] ; then
 "
 fi
 
-SSHCON='ssh -o ConnectTimeout=10 pi@192.168.16.10'
+IPPREFIX='YOURIPHERE'
+SSHCON="ssh -o ConnectTimeout=10 pi@${IPPREFIX}"
 STARTPLYR="screen -mdS piwall /home/pi/startplayer.sh"
 STOPPLYR="screen -X -S piwall quit"
 IDPLYR="export DISPLAY=:0.0 ; leafpad /home/pi/playerid.txt"
