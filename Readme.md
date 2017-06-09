@@ -64,9 +64,7 @@ The one tile-based script:
  - https://www.raspberrypi.org/downloads/raspbian/
  - https://groups.google.com/forum/?hl=en-GB#!searchin/piwall-users/config|sort:relevance/piwall-users/Hg7XOzt2CyA/uw_IN3En8hAJ
 
+# TODO
 
-
-
-
-
+Add a slideshow player for still pics. 
 
