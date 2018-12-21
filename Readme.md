@@ -13,6 +13,7 @@ The pwlibs and pwomxplayer packages have to be installed.
 The openssh-server package has to be enabled (installed and disabled by default)
 The keyboard configuration has to be changed to EN_US ("Raspberry Pi Configuration") if you're on a US keyboard.
 pwomxplayer must be able to play on the pi a video file. 
+Strongly recommend ssh keys (passwordless) for ease of use and bad security.  
 
 The piwall configuration (see Dotpiwall file) contains the layout. Each screen is considered a "tile". Assume we have a 5x3 layout. 
 
